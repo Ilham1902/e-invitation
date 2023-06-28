@@ -49,7 +49,8 @@ const salin = (btn) => {
 };
 
 const timer = () => {
-    var countDownDate = (new Date(document.getElementById('tampilan-waktu').getAttribute('data-waktu').replace(' ', 'T'))).getTime();
+    var initialDate = new Date(document.getElementById('tampilan-waktu').getAttribute('data-waktu').replace(' ', 'T'));
+    var countDownDate = initialDate.getTime() - (7 * 24 * 60 * 60 * 1000); // Mengurangi 7 hari dari tanggal awal
     var time = undefined;
     var distance = undefined;
 
